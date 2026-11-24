@@ -32,7 +32,7 @@
     }
     h1 { margin: 0; font-size: 1.55rem; }
     .subtitle { color: var(--muted); font-size: 0.92rem; margin-top: 4px; }
-    .status { font-size: 0.82rem; color: var(--muted); margin-bottom: 12px; }
+    .status { font-size: 0.84rem; color: var(--muted); margin-bottom: 12px; }
     .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     button, label.btn {
       background: var(--card);
@@ -73,6 +73,7 @@
     .time { font-size: 0.78rem; color: var(--muted); margin-bottom: 6px; }
     .theme { font-weight: 700; color: var(--accent); font-size: 1.05rem; margin-bottom: 8px; }
     .quote { font-size: 0.93rem; line-height: 1.45; margin: 10px 0; color: #e2e8f0; }
+    .subquote { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
     .tag {
       background: rgba(56, 189, 248, 0.12);
@@ -95,8 +96,9 @@
       <div class="actions">
         <button id="btn-hu" class="active" onclick="setLang('hu')">HU</button>
         <button id="btn-en" onclick="setLang('en')">EN</button>
-        <button onclick="loadRemote()">Frissítés</button>
-        <label class="btn">
+        <button id="btn-live" class="active" onclick="toggleLive()">Élő: BE</button>
+        <button id="btn-refresh" onclick="loadRemote(true)">Frissítés</button>
+        <label class="btn" id="btn-local">
           Helyi JSON
           <input type="file" id="file-input" accept=".json" style="display:none" onchange="loadLocalFile(event)" />
         </label>
@@ -110,9 +112,14 @@
 
   <script>
     const RAW_JSON_URL = "https://raw.githubusercontent.com/simson122/NEXANIC/main/tudastar.json";
+    const LIVE_INTERVAL_MS = 4000;
 
     let records = [];
     let lang = "hu";
+    let liveEnabled = true;
+    let lastJsonSnapshot = "";
+    let isFetching = false;
+    const translationCache = new Map();
 
     const ui = {
       hu: {
@@ -121,6 +128,10 @@
         placeholder: "Keresés szokásra, helyszínre, témára vagy szövegre...",
         empty: "Nincs találat.",
         loaded: (n) => `Betöltött bejegyzések: ${n}`,
+        liveOn: "Élő: BE",
+        liveOff: "Élő: KI",
+        refresh: "Frissítés",
+        local: "Helyi JSON",
         err: "Nem sikerült betölteni a GitHub JSON-t (használd a 'Helyi JSON' gombot vagy ellenőrizd a repó elérhetőségét)."
       },
       en: {
@@ -129,38 +140,114 @@
         placeholder: "Search traditions, locations, themes or text...",
         empty: "No matching entries.",
         loaded: (n) => `Loaded entries: ${n}`,
-        err: "Failed to load GitHub JSON (use 'Helyi JSON' or check repository access)."
+        liveOn: "Live: ON",
+        liveOff: "Live: OFF",
+        refresh: "Refresh",
+        local: "Local JSON",
+        err: "Failed to load GitHub JSON (use 'Local JSON' or check repository access)."
       }
     };
 
-    function setLang(newLang) {
-      lang = newLang;
+    function updateStaticUi() {
       document.getElementById("btn-hu").classList.toggle("active", lang === "hu");
       document.getElementById("btn-en").classList.toggle("active", lang === "en");
+      document.getElementById("btn-live").classList.toggle("active", liveEnabled);
       document.getElementById("title").textContent = ui[lang].title;
       document.getElementById("subtitle").textContent = ui[lang].subtitle;
       document.getElementById("search").placeholder = ui[lang].placeholder;
+      document.getElementById("btn-live").textContent = liveEnabled ? ui[lang].liveOn : ui[lang].liveOff;
+      document.getElementById("btn-refresh").textContent = ui[lang].refresh;
+      document.getElementById("btn-local").firstChild.textContent = ui[lang].local + " ";
+      if (records.length > 0) {
+        document.getElementById("status").textContent = ui[lang].loaded(records.length);
+      }
+    }
+
+    function setLang(newLang) {
+      lang = newLang;
+      updateStaticUi();
       render();
     }
 
-    async function loadRemote() {
+    function toggleLive() {
+      liveEnabled = !liveEnabled;
+      updateStaticUi();
+    }
+
+    function getDisplayText(entry, targetLang) {
+      const hu = entry.magyar || {};
+      const en = entry.english || {};
+      const raw = entry.raw || entry.szoveg || entry.text || "";
+
+      if (targetLang === "en") {
+        const directEn =
+          en.text || en.translation || en.translated_text || en.raw || en.szoveg || en.summary || "";
+        if (directEn && String(directEn).trim()) {
+          return String(directEn).trim();
+        }
+        if (!raw) return "";
+        const cacheKey = `hu->en:${raw}`;
+        if (translationCache.has(cacheKey)) {
+          return translationCache.get(cacheKey);
+        }
+        translateText(raw, "hu", "en").then((translated) => {
+          if (translated && translated !== raw) {
+            translationCache.set(cacheKey, translated);
+            render();
+          }
+        });
+        return raw;
+      } else {
+        const directHu = hu.text || hu.szoveg || raw || "";
+        return String(directHu).trim();
+      }
+    }
+
+    async function translateText(text, sourceLang, targetLang) {
+      try {
+        const clipped = String(text).slice(0, 500);
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clipped)}&langpair=${sourceLang}|${targetLang}`;
+        const res = await fetch(url);
+        if (!res.ok) return text;
+        const json = await res.json();
+        const out = json?.responseData?.translatedText;
+        if (!out || /MYMEMORY WARNING/i.test(out)) return text;
+        return out;
+      } catch {
+        return text;
+      }
+    }
+
+    async function loadRemote(forceRender = false) {
+      if (isFetching) return;
+      isFetching = true;
       const statusEl = document.getElementById("status");
       try {
         const res = await fetch(`${RAW_JSON_URL}?t=${Date.now()}`, { cache: "no-store" });
         if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
-        records = Array.isArray(data) ? data : [];
-        statusEl.textContent = ui[lang].loaded(records.length);
+        const textBody = await res.text();
+        if (textBody !== lastJsonSnapshot || forceRender) {
+          lastJsonSnapshot = textBody;
+          const parsed = JSON.parse(textBody);
+          records = Array.isArray(parsed) ? parsed : [];
+          statusEl.textContent = ui[lang].loaded(records.length);
+          render();
+        }
       } catch (e) {
-        records = [];
-        statusEl.textContent = ui[lang].err;
+        if (!records.length) {
+          statusEl.textContent = ui[lang].err;
+          render();
+        }
+      } finally {
+        isFetching = false;
       }
-      render();
     }
 
     function loadLocalFile(ev) {
       const file = ev.target.files[0];
       if (!file) return;
+      liveEnabled = false;
+      updateStaticUi();
       const reader = new FileReader();
       reader.onload = () => {
         try {
@@ -181,6 +268,7 @@
       const en = entry.english || {};
       const hay = [
         entry.raw || "",
+        getDisplayText(entry, "en"),
         entry.timestamp || "",
         hu.kultura_tema || "",
         ...(hu.emlitett_szokasok || []),
@@ -210,7 +298,7 @@
           : (en.cultural_theme || hu.kultura_tema || "Tradition");
         const traditions = lang === "hu"
           ? (hu.emlitett_szokasok || en.mentioned_traditions || [])
-          : (en.mentioned_traditions || hu.emlitett_szokasok || []);
+          : (en.mentioned_traditions || hu.emlitett_traditions || []);
         const locations = lang === "hu"
           ? (hu.emlitett_helyszinek || en.mentioned_locations || [])
           : (en.mentioned_locations || hu.emlitett_helyszinek || []);
@@ -219,11 +307,16 @@
           .map(t => `<span class="tag">${escapeHtml(String(t))}</span>`)
           .join("");
 
+        const mainText = getDisplayText(entry, lang);
+        const origText = entry.raw || entry.szoveg || "";
+        const showOrigHint = lang === "en" && origText && mainText !== origText;
+
         return `
           <article class="card">
             <div class="time">${escapeHtml(entry.timestamp || "")}</div>
             <div class="theme">${escapeHtml(String(theme))}</div>
-            ${entry.raw ? `<div class="quote">„${escapeHtml(String(entry.raw))}”</div>` : ""}
+            ${mainText ? `<div class="quote">„${escapeHtml(String(mainText))}”</div>` : ""}
+            ${showOrigHint ? `<div class="subquote">HU: ${escapeHtml(String(origText))}</div>` : ""}
             <div class="tags">${tags}</div>
           </article>
         `;
@@ -238,7 +331,11 @@
         .replaceAll('"', "&quot;");
     }
 
-    loadRemote();
+    updateStaticUi();
+    loadRemote(true);
+    setInterval(() => {
+      if (liveEnabled) loadRemote(false);
+    }, LIVE_INTERVAL_MS);
   </script>
 </body>
 </html>
