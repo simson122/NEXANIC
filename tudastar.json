@@ -2011,5 +2011,25 @@
         },
         "raw": "Jó étvágyat kívánunk.",
         "timestamp": "2026-11-24 23:39:11"
+    },
+    {
+        "raw_en": "Enjoy your meal!",
+        "magyar": {
+            "emlitett_szokasok": [
+                "jó étvágyat kívánás"
+            ],
+            "emlitett_helyszinek": [],
+            "kultura_tema": "étkezés"
+        },
+        "english": {
+            "text": "Enjoy your meal!",
+            "mentioned_traditions": [
+                "wishing a good appetite"
+            ],
+            "mentioned_locations": [],
+            "cultural_theme": "mealtime"
+        },
+        "raw": "Jó étvágyat kívánunk!",
+        "timestamp": "2026-11-24 23:41:15"
     }
 ]
