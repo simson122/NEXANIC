@@ -1991,5 +1991,25 @@
         },
         "raw": "Szia! Én Nyiregyházáról származom, de nagyszüleim és szüleim Tokajban élnek. Bolászattal foglalkoznak, van egy csomó szőlőföldjük, meg minden ilyesmi. Annyira szeretik a bort készíteni, inni is, meg kasonlóak.",
         "timestamp": "2026-11-24 23:34:26"
+    },
+    {
+        "raw_en": "We wish you a good appetite.",
+        "magyar": {
+            "emlitett_szokasok": [
+                "jó étvágyat kívánás"
+            ],
+            "emlitett_helyszinek": [],
+            "kultura_tema": "étkezés"
+        },
+        "english": {
+            "text": "We wish you a good appetite.",
+            "mentioned_traditions": [
+                "wishing a good appetite"
+            ],
+            "mentioned_locations": [],
+            "cultural_theme": "mealtime"
+        },
+        "raw": "Jó étvágyat kívánunk.",
+        "timestamp": "2026-11-24 23:39:11"
     }
 ]
