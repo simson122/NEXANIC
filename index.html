@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b1030">
+<title>NEXANIC | Hagyományarchívum / Tradition archive</title>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#0b1030;--line:rgba(239,231,214,.12);--tx:#efe7d6;--mut:#98a1c4;--red:#ee5a45;--grn:#86d1a4;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;color-scheme:dark}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--tx);font:15px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 520px at 4% -10%,rgba(238,90,69,.2),transparent 60%),radial-gradient(760px 520px at 100% 0,rgba(134,209,164,.11),transparent 60%),radial-gradient(800px 560px at 50% 125%,rgba(90,110,255,.16),transparent 60%)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+.hero{padding-bottom:20px;margin-bottom:20px;border-bottom:2px dashed rgba(238,90,69,.45)}
+.brand{display:flex;gap:16px;align-items:center}
+.logo{flex:none;width:52px;height:52px;display:grid;place-items:center;border-radius:12px;background:var(--red);color:#fff4ec;font:700 26px var(--serif);box-shadow:inset 0 0 0 3px var(--red),inset 0 0 0 5px rgba(239,231,214,.55)}
+h1{margin:0;font:700 1.9rem/1.1 var(--serif);letter-spacing:.12em}
+.brand p{margin:4px 0 0;color:var(--mut)}
+#sum{margin:14px 0 0;color:var(--tx);font-size:.95rem;min-height:1.5em}
+.tools{display:flex;flex-wrap:wrap;gap:10px;padding:10px;border:1px solid var(--line);border-radius:18px;background:rgba(14,19,52,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:5}
+@media(min-width:641px){.tools{position:sticky;top:10px}}
+.search{position:relative;flex:1 1 280px}
+input{width:100%;height:44px;padding:0 42px 0 14px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.28);color:var(--tx);font:inherit;outline:none;transition:border-color .15s,box-shadow .15s}
+input::-webkit-search-cancel-button{display:none}
+input::placeholder{color:var(--mut)}
+input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(238,90,69,.22)}
+#clr{position:absolute;right:6px;top:6px;width:32px;height:32px;border:0;border-radius:8px;background:transparent;color:var(--mut);font-size:20px;cursor:pointer}
+.btn{height:44px;padding:0 16px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;border:1px solid var(--line);background:rgba(239,231,214,.06);color:var(--tx);font:600 .88rem inherit;font-family:inherit;cursor:pointer;transition:background .15s,border-color .15s}
+.btn:hover{background:rgba(239,231,214,.12);border-color:rgba(239,231,214,.28)}
+.btn:active{background:rgba(239,231,214,.18)}
+:is(.btn,.seg button,.tag,#clr,.link):focus-visible{outline:2px solid var(--grn);outline-offset:2px}
+#live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mut)}
+#live[aria-pressed=true]{border-color:rgba(134,209,164,.5)}
+#live[aria-pressed=true]::before{background:var(--grn);animation:pulse 1.8s infinite}
+.seg{display:flex;padding:4px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.28)}
+.seg button{height:34px;padding:0 14px;border:0;border-radius:9px;background:transparent;color:var(--mut);font:700 .85rem inherit;font-family:inherit;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--red);color:#1d0a07}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 14px;margin:16px 4px;color:var(--mut);font-size:.85rem}
+.status::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:var(--mut)}
+.status.ok::before{background:var(--grn)}
+.status.busy::before{background:#f0c05a}
+.status.err::before{background:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,350px),1fr));gap:16px}
+.card{min-width:0;display:flex;flex-direction:column;gap:13px;padding:18px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(239,231,214,.07),rgba(239,231,214,.025));box-shadow:0 10px 30px rgba(3,5,20,.35);transition:border-color .18s,background .18s}
+.card:hover{border-color:rgba(238,90,69,.5);background:linear-gradient(180deg,rgba(239,231,214,.09),rgba(239,231,214,.04))}
+.card.fresh{animation:fresh 3.2s ease-out}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--mut);font-size:.8rem}
+.num{padding:2px 9px;border-radius:6px;background:rgba(238,90,69,.16);color:#ffb3a6;font-weight:700}
+time{font-variant-numeric:tabular-nums}
+h3{margin:0;font:600 1.2rem/1.3 var(--serif)}
+blockquote{margin:0;padding-left:14px;border-left:2px dashed rgba(238,90,69,.7);font:1.08rem/1.72 var(--serif);overflow-wrap:anywhere;white-space:pre-line}
+.note{margin:-5px 0 0;color:var(--mut);font-size:.8rem}
+.note.warn{color:#ffb3a6}
+.link{padding:0;border:0;background:none;color:var(--grn);font:inherit;text-decoration:underline;cursor:pointer}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{display:inline-flex;align-items:center;gap:7px;padding:4px 11px;border-radius:99px;border:1px solid;font:600 .78rem inherit;font-family:inherit;cursor:pointer;transition:background .15s}
+.tag::before{content:"";width:6px;height:6px;background:currentColor}
+.tag.tr{color:#ff9d8d;border-color:rgba(238,90,69,.4);background:rgba(238,90,69,.1)}
+.tag.tr::before{transform:rotate(45deg)}
+.tag.lo{color:var(--grn);border-color:rgba(134,209,164,.4);background:rgba(134,209,164,.1)}
+.tag.lo::before{border-radius:50%}
+.tag:hover{background:rgba(239,231,214,.16)}
+details{padding-top:10px;border-top:1px solid var(--line);color:var(--mut);font-size:.85rem}
+summary{cursor:pointer;user-select:none}
+details p{margin:8px 0 0;overflow-wrap:anywhere;white-space:pre-line}
+.empty{grid-column:1/-1;padding:56px 20px;text-align:center;color:var(--mut);border:2px dashed var(--line);border-radius:16px}
+footer{margin-top:36px;text-align:center;color:var(--mut);font-size:.8rem}
+footer a{color:var(--grn)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(134,209,164,.6)}70%,100%{box-shadow:0 0 0 7px transparent}}
+@keyframes fresh{from{border-color:var(--red);box-shadow:0 0 0 4px rgba(238,90,69,.3)}}
+@media(max-width:640px){.wrap{padding:20px 12px 44px}.btn{flex:1 1 auto}h1{font-size:1.6rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">N</div>
+      <div><h1>NEXANIC</h1><p id="sub"></p></div>
+    </div>
+    <p id="sum"></p>
+  </header>
+  <section class="tools" role="search">
+    <div class="search">
+      <input id="q" type="search" autocomplete="off" spellcheck="false" enterkeyhint="search">
+      <button id="clr" type="button" hidden>&times;</button>
+    </div>
+    <div class="seg" role="group" aria-label="HU / EN">
+      <button type="button" data-lang="hu">HU</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <button id="live" class="btn" type="button" aria-pressed="true"></button>
+    <button id="ref" class="btn" type="button"></button>
+    <button id="pick" class="btn" type="button"></button>
+    <input id="file" type="file" accept=".json,application/json" hidden>
+  </section>
+  <div class="meta"><span id="status" class="status" role="status" aria-live="polite"></span><span id="count"></span></div>
+  <main id="list" class="grid"></main>
+  <footer>NEXANIC &ndash; <a href="https://github.com/simson122/NEXANIC" target="_blank" rel="noopener">github.com/simson122/NEXANIC</a></footer>
+</div>
+<script>
+(()=>{
+"use strict";
+const RAW_JSON_URL="https://raw.githubusercontent.com/simson122/NEXANIC/main/tudastar.json";
+const POLL_MS=4000,TR_KEY="nexanic.tr.v1",LANG_KEY="nexanic.lang";
+const I={
+hu:{sub:"A hagyományőrző animatronikus robot élő tudástára",ph:"Keresés szokások, helyszínek, témák, átiratok között…",live:"Élő",on:"BE",off:"KI",ref:"Frissítés",file:"Helyi JSON",clear:"Keresés törlése",
+entries:"bejegyzés",trad:"szokás",loc:"helyszín",latest:"legutóbbi",orig:"Eredeti átirat",showing:"{n} / {m} bejegyzés látható",none:"Nincs a keresésnek megfelelő bejegyzés.",empty:"Még nincs bejegyzés az archívumban.",notext:"Nincs elérhető szöveg.",
+mt:"Gépi fordítás",pend:"Fordítás folyamatban…",fail:"A fordítás most nem érhető el (offline vagy korlátozott), az eredeti szöveg látható.",retry:"Újra",filter:"Szűrés erre",
+s_load:"Kapcsolódás…",s_ok:"Élő kapcsolat, ellenőrizve",s_pause:"Szüneteltetve, ellenőrizve",s_local:"Helyi fájl:",s_err:"Hálózati hiba, a korábbi adatok megmaradnak. Használd a Helyi JSON gombot.",s_bad:"Érvénytelen JSON, a korábbi adatok megmaradnak."},
+en:{sub:"The live knowledge archive of the tradition-keeper animatronic robot",ph:"Search traditions, places, themes, transcripts…",live:"Live",on:"ON",off:"OFF",ref:"Refresh",file:"Local JSON",clear:"Clear search",
+entries:"entries",trad:"traditions",loc:"places",latest:"latest",orig:"Original transcript",showing:"Showing {n} of {m}",none:"No entries match your search.",empty:"No entries in the archive yet.",notext:"No text available.",
+mt:"Machine translated",pend:"Translating…",fail:"Translation unavailable (offline or rate-limited), showing the original.",retry:"Retry",filter:"Filter by this",
+s_load:"Connecting…",s_ok:"Live, checked",s_pause:"Paused, checked",s_local:"Local file:",s_err:"Network error, keeping previous data. Use Local JSON.",s_bad:"Invalid JSON, keeping previous data."}};
+const $=id=>document.getElementById(id),list=$("list"),q=$("q");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fold=s=>String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const str=v=>v==null?"":String(v).trim();
+const pick=(...v)=>{for(const x of v){const s=str(x);if(s)return s}return""};
+const arr=v=>Array.isArray(v)?v.map(x=>str(x)).filter(Boolean):str(v)?[str(v)]:[];
+let lang,live=true,E=[],last=null,st={k:"load"},busy=false,loaded=false,timer,rt,running=0,tr={};
+let fresh=new Set(),open=new Set();
+const pend=new Set(),failed=new Set(),queue=[];
+try{lang=localStorage.getItem(LANG_KEY)}catch(e){}
+if(lang!=="hu"&&lang!=="en")lang=(navigator.language||"").toLowerCase().startsWith("hu")?"hu":"en";
+try{tr=JSON.parse(localStorage.getItem(TR_KEY)||"{}")||{}}catch(e){tr={}}
+
+/* ---- data normalisation: tolerant of missing or oddly shaped fields ---- */
+function norm(e,i){
+  if(!e||typeof e!=="object")e={raw:e};
+  const m=e.magyar||e.hu||{},g=e.english||e.en||{};
+  const o={id:i,n:i+1,ts:pick(e.timestamp,e.time,e.date),
+    raw:pick(e.raw,m.szoveg,m.text),
+    rawEn:pick(e.raw_en,g.text,g.translation,g.transcript,e.text_en,e.translation,typeof g==="string"?g:""),
+    hu:{th:pick(m.kultura_tema),tr:arr(m.emlitett_szokasok),lo:arr(m.emlitett_helyszinek)},
+    en:{th:pick(g.cultural_theme),tr:arr(g.mentioned_traditions),lo:arr(g.mentioned_locations)}};
+  o.hay=fold([o.ts,o.raw,o.rawEn,o.hu.th,o.en.th,...o.hu.tr,...o.en.tr,...o.hu.lo,...o.en.lo].join("\n"));
+  return o}
+const L=(o,k)=>{const a=lang==="hu"?[o.hu[k],o.en[k]]:[o.en[k],o.hu[k]];return a[0].length?a[0]:a[1]};
+
+/* ---- client-side translation fallback (MyMemory, cached, never silent) ---- */
+async function xlate(text){
+  const ch=[];let cur="";
+  for(const s of text.match(/[^.!?…]+[.!?…]*\s*/g)||[text]){
+    if(cur&&(cur+s).length>450){ch.push(cur);cur=""}
+    cur+=s;
+    while(cur.length>450){ch.push(cur.slice(0,450));cur=cur.slice(450)}
+  }
+  if(cur.trim())ch.push(cur);
+  let out="";
+  for(const c of ch){
+    const r=await fetch("https://api.mymemory.translated.net/get?langpair=hu%7Cen&q="+encodeURIComponent(c));
+    const j=await r.json(),x=j&&j.responseData&&j.responseData.translatedText;
+    if(!r.ok||+j.responseStatus!==200||!x||/MYMEMORY WARNING/i.test(x))throw new Error("tr");
+    out+=x+" ";
+  }
+  return out.trim()}
+function need(t){
+  if(tr[t])return tr[t];
+  if(!pend.has(t)&&!failed.has(t)){pend.add(t);queue.push(t);pump()}
+  return null}
+function pump(){
+  while(running<2&&queue.length){
+    const t=queue.shift();running++;
+    xlate(t).then(x=>{tr[t]=x;try{localStorage.setItem(TR_KEY,JSON.stringify(tr))}catch(e){}})
+      .catch(()=>failed.add(t))
+      .finally(()=>{running--;pend.delete(t);clearTimeout(rt);rt=setTimeout(render,200);pump()});
+  }}
+
+/* ---- rendering ---- */
+function view(o){
+  if(lang==="hu")return{text:o.raw||o.rawEn,th:o.hu.th||o.en.th,tr:L(o,"tr"),lo:L(o,"lo"),s:"",orig:""};
+  let text=o.rawEn,s="";
+  if(!text&&o.raw){const x=need(o.raw);if(x){text=x;s="mt"}else{text=o.raw;s=failed.has(o.raw)?"fail":"pend"}}
+  const th=o.en.th||(o.hu.th&&(need(o.hu.th)||o.hu.th))||"";
+  return{text,th,tr:L(o,"tr"),lo:L(o,"lo"),s,orig:o.raw&&o.raw!==text?o.raw:""}}
+const tag=(x,k)=>`<button type="button" class="tag ${k}" data-q="${esc(x)}" title="${esc(I[lang].filter)}">${esc(x)}</button>`;
+function card(o){
+  const t=I[lang],v=view(o),Q=lang==="hu"?["„","”"]:["“","”"];
+  const tags=v.tr.map(x=>tag(x,"tr")).concat(v.lo.map(x=>tag(x,"lo"))).join("");
+  const note=v.s==="mt"?`<p class="note">${esc(t.mt)}</p>`:v.s==="pend"?`<p class="note">${esc(t.pend)}</p>`:v.s==="fail"?`<p class="note warn">${esc(t.fail)} <button type="button" class="link" data-retry="${o.id}">${esc(t.retry)}</button></p>`:"";
+  const orig=v.orig?`<details data-id="${o.id}"${open.has(o.id)?" open":""}><summary>${esc(t.orig)}</summary><p>${esc(v.orig)}</p></details>`:"";
+  return `<article class="card${fresh.has(o.id)?" fresh":""}"><div class="top"><span class="num">#${o.n}</span><time>${esc(o.ts)}</time></div>${v.th?`<h3>${esc(v.th)}</h3>`:""}${v.text?`<blockquote>${Q[0]}${esc(v.text)}${Q[1]}</blockquote>`:`<p class="note">${esc(t.notext)}</p>`}${note}${tags?`<div class="tags">${tags}</div>`:""}${orig}</article>`}
+function summary(){
+  const t=I[lang],S=k=>{const m=new Set();E.forEach(o=>L(o,k).forEach(x=>m.add(fold(x))));return m.size};
+  $("sum").textContent=E.length?`${E.length} ${t.entries}, ${S("tr")} ${t.trad}, ${S("lo")} ${t.loc}, ${t.latest}: ${E[E.length-1].ts||"–"}`:""}
+function render(){
+  const t=I[lang],terms=fold(q.value.trim()).split(/\s+/).filter(Boolean);
+  const rows=E.filter(o=>terms.every(w=>o.hay.includes(w))).reverse(); /* newest first */
+  $("count").textContent=E.length?t.showing.replace("{n}",rows.length).replace("{m}",E.length):"";
+  summary();
+  list.innerHTML=rows.length?rows.map(card).join(""):`<div class="empty">${esc(!loaded?t.s_load:E.length?t.none:t.empty)}</div>`}
+function paint(){
+  const t=I[lang],k=st.k,s=$("status");
+  s.className="status "+({load:"busy",ok:live?"ok":"",err:"err",bad:"err"}[k]||"");
+  s.textContent=k==="load"?t.s_load:k==="ok"?`${live?t.s_ok:t.s_pause} ${st.time.toLocaleTimeString(lang==="hu"?"hu-HU":"en-GB")}`:k==="local"?`${t.s_local} ${st.name}`:k==="err"?t.s_err:t.s_bad}
+function ui(){
+  const t=I[lang];
+  document.documentElement.lang=lang;
+  $("sub").textContent=t.sub;q.placeholder=t.ph;q.setAttribute("aria-label",t.ph);
+  $("live").textContent=`${t.live}: ${live?t.on:t.off}`;$("live").setAttribute("aria-pressed",live);
+  $("ref").textContent=t.ref;$("pick").textContent=t.file;$("clr").setAttribute("aria-label",t.clear);
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
+  paint()}
+
+/* ---- loading: live polling with change detection, manual refresh, local file ---- */
+function apply(txt,src,name){
+  let d;try{d=JSON.parse(txt)}catch(e){st={k:"bad"};paint();return false}
+  if(!Array.isArray(d))d=d&&Array.isArray(d.entries)?d.entries:d&&Array.isArray(d.data)?d.data:d&&typeof d==="object"?[d]:[];
+  const prev=E.length;
+  E=d.map(norm);last=txt;loaded=true;
+  fresh=new Set(prev?E.filter(o=>o.id>=prev).map(o=>o.id):[]);setTimeout(()=>fresh.clear(),3500);
+  st=src==="local"?{k:"local",name}:{k:"ok",time:new Date()};
+  paint();render();return true}
+async function load(manual){
+  if(busy)return;busy=true;
+  if(manual||!loaded){st={k:"load"};paint()}
+  try{
+    const r=await fetch(`${RAW_JSON_URL}?t=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    const txt=await r.text();
+    if(st.k==="local"&&!manual)return;
+    if(txt!==last||st.k==="local")apply(txt,"live");else{st={k:"ok",time:new Date()};paint()}
+  }catch(e){st={k:"err"};paint()}
+  finally{busy=false;if(!loaded){loaded=true;render()}}}
+function tick(){
+  clearTimeout(timer);
+  if(live)timer=setTimeout(async()=>{if(!document.hidden)await load();tick()},POLL_MS)}
+
+/* ---- events ---- */
+document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>{
+  lang=b.dataset.lang;try{localStorage.setItem(LANG_KEY,lang)}catch(e){}
+  ui();render()});
+$("live").onclick=()=>{live=!live;ui();if(live)load(true).then(tick);else clearTimeout(timer)};
+$("ref").onclick=()=>{failed.clear();load(true).then(render)};
+$("pick").onclick=()=>$("file").click();
+$("file").onchange=async ev=>{
+  const f=ev.target.files[0];if(!f)return;
+  try{if(apply(await f.text(),"local",f.name)){live=false;clearTimeout(timer);ui()}}
+  catch(e){st={k:"bad"};paint()}
+  ev.target.value=""};
+q.oninput=()=>{$("clr").hidden=!q.value;render()};
+$("clr").onclick=()=>{q.value="";$("clr").hidden=true;render();q.focus()};
+list.addEventListener("click",e=>{
+  const r=e.target.closest("[data-retry]");
+  if(r){const o=E[+r.dataset.retry];if(o){failed.delete(o.raw);render()}return}
+  const g=e.target.closest("[data-q]");
+  if(g){q.value=g.dataset.q;$("clr").hidden=false;render();scrollTo({top:0,behavior:"smooth"})}});
+list.addEventListener("toggle",e=>{
+  const d=e.target;
+  if(d.tagName==="DETAILS"){const id=+d.dataset.id;d.open?open.add(id):open.delete(id)}},true);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&live)load()});
+document.addEventListener("keydown",e=>{
+  if(e.key==="/"&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();q.focus()}});
+
+ui();render();load(true).then(tick);
+})();
+</script>
+</body>
+</html>
