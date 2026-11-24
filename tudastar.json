@@ -1943,5 +1943,25 @@
         },
         "raw": "Én Tiszanastorban származom, Nyíregyháza környékéről is, sok csádi hagyományt ismerek, meséjek volok bővebben is.",
         "timestamp": "2026-11-24 22:43:03"
+    },
+    {
+        "raw_en": "Hello! I come from Tokaj. My parents are engaged in winemaking, and we have a lot of vineyard.",
+        "magyar": {
+            "emlitett_szokasok": [],
+            "emlitett_helyszinek": [
+                "Tokaj"
+            ],
+            "kultura_tema": "borászat"
+        },
+        "english": {
+            "text": "Hello! I come from Tokaj. My parents are engaged in winemaking, and we have a lot of vineyard.",
+            "mentioned_traditions": [],
+            "mentioned_locations": [
+                "Tokaj"
+            ],
+            "cultural_theme": "winemaking"
+        },
+        "raw": "Szia! Én Tokajból származom. A szüleim borászottal foglalkoznak, és van egy csomó szőlőföldünk.",
+        "timestamp": "2026-11-24 23:32:05"
     }
 ]
