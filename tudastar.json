@@ -1963,5 +1963,33 @@
         },
         "raw": "Szia! Én Tokajból származom. A szüleim borászottal foglalkoznak, és van egy csomó szőlőföldünk.",
         "timestamp": "2026-11-24 23:32:05"
+    },
+    {
+        "raw_en": "Hello! I come from Nyíregyháza, but my grandparents and parents live in Tokaj. They are engaged in winemaking, have a lot of vineyards, and all that kind of stuff. They really love making wine, drinking it, and similar activities.",
+        "magyar": {
+            "emlitett_szokasok": [
+                "borkészítés",
+                "borfogyasztás"
+            ],
+            "emlitett_helyszinek": [
+                "Nyíregyháza",
+                "Tokaj"
+            ],
+            "kultura_tema": "bor és borkultúra"
+        },
+        "english": {
+            "text": "Hello! I come from Nyíregyháza, but my grandparents and parents live in Tokaj. They are engaged in winemaking, have a lot of vineyards, and all that kind of stuff. They really love making wine, drinking it, and similar activities.",
+            "mentioned_traditions": [
+                "winemaking",
+                "wine consumption"
+            ],
+            "mentioned_locations": [
+                "Nyíregyháza",
+                "Tokaj"
+            ],
+            "cultural_theme": "wine and wine culture"
+        },
+        "raw": "Szia! Én Nyiregyházáról származom, de nagyszüleim és szüleim Tokajban élnek. Bolászattal foglalkoznak, van egy csomó szőlőföldjük, meg minden ilyesmi. Annyira szeretik a bort készíteni, inni is, meg kasonlóak.",
+        "timestamp": "2026-11-24 23:34:26"
     }
 ]
