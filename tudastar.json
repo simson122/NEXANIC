@@ -332,4 +332,62 @@
             "kultura_tema": "Munkafázisok, diagnosztika és tudásátadás"
         },
         "english": {
-            "text": "When we listen from the beginning to the story of an old moped or farm machine, it becomes clear that repair isn't isolated tricks, b
+            "text": "When we listen from the beginning to the story of an old moped or farm machine, it becomes clear that repair isn't isolated tricks, but connected work phases. First we always listen to the machine: strange knocking, rattling, misfires, or uneven idle all give clues. Then comes disassembly and cleaning, because in mud and oily grime you can't see hairline cracks or uneven wear. Old craftsmen worked by eye, ear, and touch: they checked spark plug color, chain slack, bearing play, and only closed up the engine case once every movement was smooth and free. This knowledge is easily lost because in everyday practice it often goes unspoken, yet if preserved structured and searchable, it can guide a young person picking up a wrench or drill for the first time twenty years from now.",
+        "timestamp": "2026-11-24 23:56:15",
+        "magyar": {
+            "emlitett_szokasok": [
+                "hibakeresés fülre és szemre",
+                "gépek tisztítása és szétbontása",
+                "műhelyi munkafázisok átadása"
+            ],
+            "emlitett_helyszinek": [
+                "Tiszanagyfalu",
+                "Nyíregyháza"
+            ],
+            "kultura_tema": "Munkafázisok, diagnosztika és tudásátadás"
+        },
+        "english": {
+            "text": "When we listen from the beginning to the story of an old moped or farm machine, it becomes clear that repair isn't isolated tricks, but connected work phases. First we always listen to the machine: strange knocking, rattling, misfires, or uneven idle all give clues. Then comes disassembly and cleaning, because in mud and oily grime you can't see hairline cracks or uneven wear. Old craftsmen worked by eye, ear, and touch: they checked spark plug color, chain slack, bearing play, and only closed up the engine case once every movement was smooth and free. This knowledge is easily lost because in everyday practice it often goes unspoken, yet if preserved structured and searchable, it can guide a young person picking up a wrench or drill for the first time twenty years from now.",
+            "mentioned_traditions": [
+                "troubleshooting by ear and sight",
+                "cleaning and disassembling machinery",
+                "passing down workshop phases"
+            ],
+            "mentioned_locations": [
+                "Tiszanagyfalu",
+                "Nyíregyháza"
+            ],
+            "cultural_theme": "Workflow phases, diagnostics, and knowledge transfer"
+        }
+    },
+    {
+        "raw": "A régi paraszti háztartásokban semmi sem ment kárba, mert mindennek megvolt a maga másodlagos haszna. Ha egy edény elrepedt, vagy egy fém alkatrész eltörött, előbb megnézték, lehet-e foltozni, hegeszteni, vagy más célra befogni.",
+        "raw_en": "In old peasant households nothing went to waste, because everything had a secondary use. If a vessel cracked or a metal part broke, they first checked whether it could be patched, welded, or repurposed.",
+        "timestamp": "2026-11-25 00:08:12",
+        "magyar": {
+            "emlitett_szokasok": [
+                "eszközök újrafelhasználása",
+                "megfigyelésen alapuló főzés és sózás",
+                "helyi tudás archiválása"
+            ],
+            "emlitett_helyszinek": [
+                "Szabolcs-Szatmár-Bereg",
+                "Nyírség"
+            ],
+            "kultura_tema": "Takarékosság, újrafelhasználás és élő archívum"
+        },
+        "english": {
+            "text": "In old peasant households nothing went to waste, because everything had a secondary use. If a vessel cracked or a metal part broke, they first checked whether it could be patched, welded, or repurposed.",
+            "mentioned_traditions": [
+                "repurposing tools and vessels",
+                "observation-based cooking and salting",
+                "archiving local knowledge"
+            ],
+            "mentioned_locations": [
+                "Szabolcs-Szatmár-Bereg",
+                "Nyírség"
+            ],
+            "cultural_theme": "Resourcefulness, reuse, and living archive"
+        }
+    }
+]
