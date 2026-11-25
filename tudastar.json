@@ -282,5 +282,54 @@
             ],
             "cultural_theme": "Wine and wine culture"
         }
-    }
-]
+    },
+    {
+        "raw": "Mesélem az elejétől, hogyan csináltuk a kovászos és a vizes savanyú uborkát a nagyanyámmal. Először a kerti uborkát egy egész éjszakára hideg vízben áztattuk, hogy ropogós maradjon, ne legyen üreges a belseje, és ne puhuljon fel a lében. Másnap kiválogattuk a kemény, ép darabokat, alaposan lesikáltuk őket, a végüket levágtuk, és néhányat villával megszurkáltunk. Az üveg aljára ment a friss kapor, a tormagyökér, a fokhagymagerezd, néhány szem bors és mustármag, erre állítottuk szorosan az uborkákat, a tetejére pedig ismét kapor és torma került. A nagy kérdés mindig az volt: honnan tudták, hogy jó-e a lé, és mennyi is az a 'kevés só', amit a receptek emlegettek? Nálunk literenként egy púpozott evőkanál nem jódozott só volt az alap, de a régi asszonyok nemcsak kanalaztak, hanem megkóstolták a felöntőlét: olyan sós-savanykásnak kellett lennie, mint egy kellemes, határozott levesnek, ami nem marja a torkot, de nem is édeskés-vizes. A kovászosnál a kenyérhéj indította be az erjedést a napon, a vizes-ecetesnél pedig a forró, ízesített felöntőlé és a türelmes pihentetés döntötte el, hogy roppanós marad-e tavaszig.",
+        "raw_en": "I'll tell from the beginning how my grandmother and I made fermented sourdough pickles and brined pickles. First, we soaked garden cucumbers in cold water overnight so they would stay crisp, wouldn't turn hollow inside, and wouldn't go soft in the brine. The next day we sorted out firm, intact cucumbers, scrubbed them thoroughly, trimmed the ends, and pricked a few with a fork. At the bottom of the jar went fresh dill, horseradish root, garlic cloves, whole peppercorns, and mustard seeds; we packed the cucumbers tightly on top and finished with dill and horseradish. The big question was always: how did they know if the brine was right, and how much is 'a little salt' mentioned in old recipes? Our rule of thumb was one heaping tablespoon of non-iodized salt per liter, yet older women didn't just measure by spoon—they tasted the brine: it had to be pleasantly savory and distinct like a well-seasoned broth, not harsh on the throat and not bland or watery. For sourdough pickles, a crust of bread started fermentation in the sun, while for brined/vinegar pickles, the hot seasoned brine and patient resting decided whether they stayed crunchy until spring.",
+        "timestamp": "2026-11-24 23:52:00",
+        "magyar": {
+            "emlitett_szokasok": [
+                "savanyú uborka eltevése",
+                "kovászos uborka készítés",
+                "felöntőlé kóstolás és sózás",
+                "hideg vizes áztatás"
+            ],
+            "emlitett_helyszinek": [
+                "Tiszanagyfalu",
+                "Szabolcs"
+            ],
+            "kultura_tema": "Konyhai praktikumok, sózás és savanyítás"
+        },
+        "english": {
+            "text": "I'll tell from the beginning how my grandmother and I made fermented sourdough pickles and brined pickles. First, we soaked garden cucumbers in cold water overnight so they would stay crisp, wouldn't turn hollow inside, and wouldn't go soft in the brine. The next day we sorted out firm, intact cucumbers, scrubbed them thoroughly, trimmed the ends, and pricked a few with a fork. At the bottom of the jar went fresh dill, horseradish root, garlic cloves, whole peppercorns, and mustard seeds; we packed the cucumbers tightly on top and finished with dill and horseradish. The big question was always: how did they know if the brine was right, and how much is 'a little salt' mentioned in old recipes? Our rule of thumb was one heaping tablespoon of non-iodized salt per liter, yet older women didn't just measure by spoon—they tasted the brine: it had to be pleasantly savory and distinct like a well-seasoned broth, not harsh on the throat and not bland or watery. For sourdough pickles, a crust of bread started fermentation in the sun, while for brined/vinegar pickles, the hot seasoned brine and patient resting decided whether they stayed crunchy until spring.",
+            "mentioned_traditions": [
+                "preserving pickles",
+                "sourdough cucumber fermentation",
+                "tasting and salting brine",
+                "cold-water soaking"
+            ],
+            "mentioned_locations": [
+                "Tiszanagyfalu",
+                "Szabolcs"
+            ],
+            "cultural_theme": "Kitchen craft, salting rules, and pickling"
+        }
+    },
+    {
+        "raw": "Ha egy régi kismotor vagy mezőgazdasági gép történetét hallgatjuk az elejétől, kiderül, hogy a szerelés nem különálló trükkökből áll, hanem összefüggő munkafázisokból. Először mindig meghallgatjuk a gépet: furcsa kopogás, csörgés, kihagyó gyújtás vagy egyenetlen alapjárat mind árulkodik. Utána jön a szétbontás és a tisztítás, mert a sárban és az olajos dzsuvában nem látod a hajszálrepedést vagy a féloldalas kopást. A régi mesterek szemre, fülre és kézzel dolgoztak: megnézték a gyertyakép színét, a lánc lógását, a csapágyak holtjátékát, és csak akkor zárták össze a blokkot, ha minden mozdulat könnyed és akadálymentes volt. Ez a tudás azért vész el könnyen, mert a mindennapi gyakorlatban sokszor kimondatlan marad, pedig ha leírva, felcímkézve megmarad, húsz év múlva is pontos útmutatót ad egy fiatalnak, aki először fog villáskulcsot vagy fúrót a kezébe.",
+        "raw_en": "When we listen from the beginning to the story of an old moped or farm machine, it becomes clear that repair isn't isolated tricks, but connected work phases. First we always listen to the machine: strange knocking, rattling, misfires, or uneven idle all give clues. Then comes disassembly and cleaning, because in mud and oily grime you can't see hairline cracks or uneven wear. Old craftsmen worked by eye, ear, and touch: they checked spark plug color, chain slack, bearing play, and only closed up the engine case once every movement was smooth and free. This knowledge is easily lost because in everyday practice it often goes unspoken, yet if preserved structured and searchable, it can guide a young person picking up a wrench or drill for the first time twenty years from now.",
+        "timestamp": "2026-11-24 23:56:15",
+        "magyar": {
+            "emlitett_szokasok": [
+                "hibakeresés fülre és szemre",
+                "gépek tisztítása és szétbontása",
+                "műhelyi munkafázisok átadása"
+            ],
+            "emlitett_helyszinek": [
+                "Tiszanagyfalu",
+                "Nyíregyháza"
+            ],
+            "kultura_tema": "Munkafázisok, diagnosztika és tudásátadás"
+        },
+        "english": {
+            "text": "When we listen from the beginning to the story of an old moped or farm machine, it becomes clear that repair isn't isolated tricks, b
