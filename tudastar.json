@@ -9,148 +9,282 @@
         ],
         "tudafelem": "A ZIL váltónál a második fokozat kopásának ellenőrzése elengedhetetlen az erdei utakon.",
         "rovid_osszefoglalo": "A ZIL váltó karbantartásának kulcsa a második fokozat rendszeres ellenőrzése a kopás megelőzése érdekében.",
-        "dramatizalt_verzio": "Képzeld el, ahogy egy tapasztalt szerelő a ZIL váltó fölé hajol, történeket mesélve a bükkfák alatt, miközben figyelmezteti a fiát, hogy az erdei utakon a második fokozat az, ahol a legjobban kopik a fogaskerék. Az évek alatt ez a titkos tudás életet mentett azoknak, akik tudták, mit kell keresniük.",
+        "dramatizalt_verzio": "Képzeld el, ahogy egy tapasztalt szerelő a ZIL váltó fölé hajol, történeteket mesélve a bükkfák alatt, miközben figyelmezteti a fiát, hogy az erdei utakon a második fokozat az, ahol a legjobban kopik a fogaskerék.",
         "forditas_en": "The key to maintaining the ZIL gearbox is the regular inspection of the second gear to prevent wear."
     },
     {
-        "kategoria": "főzés",
-        "kulcsszavak": [
-            "étkezés",
-            "ízek"
-        ],
-        "tudafelem": "Az étkezés közbeni ízek és élmények nyújtása.",
-        "rovid_osszefoglalo": "Az interjú az étkezés örömeiről és az ízek fontosságáról szól, azzal a céllal, hogy inspirálja az embereket az étkezési szokásaik értékelésére.",
-        "dramatizalt_verzio": "Képzeljünk el egy vacsorát, ahol a család és a barátok összegyűlnek, hogy megosszanak egy ínycsiklandó étkezést. Minden falat egy új ízrobbanást hoz, és a beszélgetések során régi emlékek elevenednek meg. Jó étvágyat kívánunk! - e szavak különleges hangulatot varázsolnak a dőlt asztal köré.",
-        "forditas_en": "The interview discusses the joys of dining and the importance of flavors, aimed at inspiring people to appreciate their eating habits."
+        "raw": "Tavasszal, amikor megindult a nedvkeringés, a dédnagyapám elővette a fenőkővel megélezett oltókését, hasítékoltással oltotta be a vadalmát, és oltóviasszal kente le a sebet, hogy ki ne száradjon.",
+        "raw_en": "In spring when the sap started rising, my great-grandfather took his grafting knife sharpened on a whetstone, cleft-grafted the wild apple tree, and sealed the wound with grafting wax so it wouldn't dry out.",
+        "timestamp": "2026-11-24 23:45:10",
+        "magyar": {
+            "emlitett_szokasok": [
+                "gyümölcsfa oltás",
+                "hasítékoltás",
+                "oltókés fenése",
+                "oltóviaszolás"
+            ],
+            "emlitett_helyszinek": [
+                "Tiszanagyfalu",
+                "Szabolcs"
+            ],
+            "kultura_tema": "Gyümölcsfa-oltás és régi kertészeti fogások"
+        },
+        "english": {
+            "text": "In spring when the sap started rising, my great-grandfather took his grafting knife sharpened on a whetstone, cleft-grafted the wild apple tree, and sealed the wound with grafting wax so it wouldn't dry out.",
+            "mentioned_traditions": [
+                "fruit tree grafting",
+                "cleft grafting",
+                "sharpening grafting knife",
+                "applying grafting wax"
+            ],
+            "mentioned_locations": [
+                "Tiszanagyfalu",
+                "Szabolcs"
+            ],
+            "cultural_theme": "Fruit tree grafting and traditional orchard craft"
+        }
     },
     {
-        "kategoria": "Közlekedés",
-        "kulcsszavak": [
-            "köszönet",
-            "találkozás"
-        ],
-        "tudafelem": "Búcsúzás után az interjú gazdája a jövőbeli találkozás lehetőségét említi.",
-        "rovid_osszefoglalo": "Az interjú gazdája elbúcsúzik és megemlíti, hogy legközelebb találkoznak.",
-        "dramatizalt_verzio": "A beszélgetés végén az interjú gazdája barátságosan köszöni meg a figyelmet, miközben a nézőknek ígéri, hogy legközelebb újra találkoznak, ezzel fenntartva a várakozást a következő alkalomra.",
-        "forditas_en": "The host bids farewell and mentions the possibility of meeting again next time."
+        "raw": "A Simson S51 Enduro blokkjánál az első leckét édesapámtól tanultam: a megszakítóhézagot és az előgyújtást hézagmérővel kell pontosan belőni, különben melegen nem indul.",
+        "raw_en": "With the Simson S51 Enduro engine, I learned the first lesson from my dad: you must set the breaker point gap and ignition timing accurately with a feeler gauge, or it won't start when hot.",
+        "timestamp": "2026-06-28 14:15:10",
+        "magyar": {
+            "emlitett_szokasok": [
+                "Simson S51 Enduro szerelés",
+                "előgyújtás beállítás",
+                "megszakítóhézag mérés"
+            ],
+            "emlitett_helyszinek": [
+                "Tiszanagyfalu"
+            ],
+            "kultura_tema": "Kismotor-szerelési tudás átadása"
+        },
+        "english": {
+            "text": "With the Simson S51 Enduro engine, I learned the first lesson from my dad: you must set the breaker point gap and ignition timing accurately with a feeler gauge, or it won't start when hot.",
+            "mentioned_traditions": [
+                "Simson S51 Enduro maintenance",
+                "ignition timing adjustment",
+                "breaker point gap measurement"
+            ],
+            "mentioned_locations": [
+                "Tiszanagyfalu"
+            ],
+            "cultural_theme": "Passing down moped repair knowledge"
+        }
     },
     {
-        "kategoria": "népszokások",
-        "kulcsszavak": [
-            "színek",
-            "feleskedély"
-        ],
-        "tudafelem": "A színek használatának jelentősége a hagyományokban.",
-        "rovid_osszefoglalo": "A színek szimbolikája és a hagyományos jelentősége folytatódik.",
-        "dramatizalt_verzio": "Az emberek a hagyományokra építve bíznak a színek jelentésében, ám ha figyelmen kívül hagyják ezeket, különféle következményekkel szembesülnek, ami feszültséget okoz a közösségben.",
-        "forditas_en": "The significance of colors and their traditional meanings continues."
+        "raw": "Nyíregyházáról származom; sokat morzsoltunk kukoricát, kapáltunk együtt apukámmal, kézzel vetettük a kukoricát a kertben, szedtük a cseresznyét, és dunsztolással tettük el a befőtteket.",
+        "raw_en": "I'm from Nyíregyháza; we shelled corn, hoed together with my dad, planted corn by hand in the garden, picked cherries, and preserved compotes using jar pasteurization.",
+        "timestamp": "2026-06-20 17:25:12",
+        "magyar": {
+            "emlitett_szokasok": [
+                "kukoricamorzsolás",
+                "kapálás",
+                "kézi vetés",
+                "cseresznyeszedés",
+                "befőzés",
+                "dunsztolás"
+            ],
+            "emlitett_helyszinek": [
+                "Nyíregyháza"
+            ],
+            "kultura_tema": "Mezőgazdasági hagyományok és befőzés"
+        },
+        "english": {
+            "text": "I'm from Nyíregyháza; we shelled corn, hoed together with my dad, planted corn by hand in the garden, picked cherries, and preserved compotes using jar pasteurization.",
+            "mentioned_traditions": [
+                "corn shelling",
+                "hoeing",
+                "hand planting",
+                "cherry picking",
+                "jar preserving"
+            ],
+            "mentioned_locations": [
+                "Nyíregyháza"
+            ],
+            "cultural_theme": "Agricultural traditions and preserving"
+        }
     },
     {
-        "kategoria": "Népszokások",
-        "kulcsszavak": [
-            "utazás",
-            "csend"
-        ],
-        "tudafelem": "Az utazás során a csend megélése és a figyelem összpontosítása elengedhetetlen a valódi tapasztalatokhoz.",
-        "rovid_osszefoglalo": "Az interjú az utazás csendjéről és a figyelem fontosságáról szól, amely segít a mélyebb élmények megélésében.",
-        "dramatizalt_verzio": "Képzelj el egy nyugodt utazást, ahol a csend körülölel, és minden lépésedben a világ szépségei bontakoznak ki. A füledhez közel hajolva hallod a természet hangjait, és ez a csend segítségével egy teljesen új perspektívát nyersz az utazás során.",
-        "forditas_en": "The interview discusses the silence of travel and the importance of focus, which helps to experience deeper impressions."
+        "raw": "Miskolcról származom, nagy családban nőttem fel, és minden évben többször készítünk miskolci kocsonyát. Emellett régebbi Trabantokat is szereltünk, ahol megtanultuk, mennyire fontos a váltó rendszeres olajcseréje.",
+        "raw_en": "I'm from Miskolc, grew up in a big family, and we make Miskolc-style aspic several times a year. We also worked on older Trabants and learned how important regular gearbox oil changes are.",
+        "timestamp": "2026-06-20 17:29:20",
+        "magyar": {
+            "emlitett_szokasok": [
+                "miskolci kocsonya készítése",
+                "Trabant szerelés",
+                "váltóolaj-csere"
+            ],
+            "emlitett_helyszinek": [
+                "Miskolc"
+            ],
+            "kultura_tema": "Hagyományok, étkezési szokások és régi autók karbantartása"
+        },
+        "english": {
+            "text": "I'm from Miskolc, grew up in a big family, and we make Miskolc-style aspic several times a year. We also worked on older Trabants and learned how important regular gearbox oil changes are.",
+            "mentioned_traditions": [
+                "Miskolc aspic making",
+                "Trabant maintenance",
+                "gearbox oil change"
+            ],
+            "mentioned_locations": [
+                "Miskolc"
+            ],
+            "cultural_theme": "Local cuisine and classic car maintenance"
+        }
     },
     {
-        "kategoria": "gépészet",
-        "kulcsszavak": [
-            "szerelés",
-            "meghibásodás"
-        ],
-        "tudafelem": "A hibás alkatrészek cseréje és karbantartása",
-        "rovid_osszefoglalo": "A kukában található hibás alkatrészek szakszerű cseréje és a rendszeres karbantartás fontossága.",
-        "dramatizalt_verzio": "Képzeld el, ahogy a találkozó után a barátok köré gyűlnek a műhelyben, és a felkorbácsolt szenvedéllyel a kukák szerelésére és a kuponos alkatrészek dühítő meghibásodásának megoldására összpontosítanak.",
-        "forditas_en": "The importance of professionally replacing faulty parts in the bin and regular maintenance."
+        "raw": "Tokaj környékén ősszel a szüret köré szerveződik az élet: a szőlő szedése, a darálás, a préselés és a közös bográcsozás mindig összehozza a családot és a szomszédokat.",
+        "raw_en": "Around Tokaj, autumn life revolves around the grape harvest: picking, crushing, pressing the grapes, and cooking in a cauldron outdoors always brings family and neighbors together.",
+        "timestamp": "2026-07-12 18:10:00",
+        "magyar": {
+            "emlitett_szokasok": [
+                "szüretelés",
+                "szőlőpréselés",
+                "mustkészítés",
+                "bográcsozás"
+            ],
+            "emlitett_helyszinek": [
+                "Tokaj",
+                "Kopasz-hegy"
+            ],
+            "kultura_tema": "Szőlészet és szüreti hagyományok"
+        },
+        "english": {
+            "text": "Around Tokaj, autumn life revolves around the grape harvest: picking, crushing, pressing the grapes, and cooking in a cauldron outdoors always brings family and neighbors together.",
+            "mentioned_traditions": [
+                "grape harvest",
+                "grape pressing",
+                "must making",
+                "outdoor cauldron cooking"
+            ],
+            "mentioned_locations": [
+                "Tokaj",
+                "Kopasz-hegy"
+            ],
+            "cultural_theme": "Viticulture and harvest traditions"
+        }
     },
     {
-        "kategoria": "gépészet",
-        "kulcsszavak": [
-            "színszont",
-            "fogaskerekek",
-            "járvítás"
-        ],
-        "tudafelem": "A fogaskerekek állandó elromlásának orvoslására a járvítás szükséges a színszónban.",
-        "rovid_osszefoglalo": "A kuprunkban a fogaskerekek gyakori meghibásodásával szembesültünk, ami rendszeres járvítást igényel.",
-        "dramatizalt_verzio": "Képzelj el egy forró nyári napot, amikor a színszont szerelni kezdtük. Hirtelen felfedeztük, hogy a fogaskerekek megint tönkrementek, és már-már úgy tűnt, hogy a munka véget ér, de nem adtuk fel, és mindent megteszünk, hogy helyrehozzuk őket.",
-        "forditas_en": "We encountered frequent malfunctions of the gears in our device, which requires regular re-machining."
+        "raw": "A Tisza partján felnőve a víz közelsége, a csónakok tavaszi rendbetétele és a hajnali horgászatokhoz kapcsolódó történetek mindennaposak.",
+        "raw_en": "Growing up by the Tisza River, being close to the water, refurbishing boats in spring, and sharing stories from dawn fishing trips are part of everyday life.",
+        "timestamp": "2026-07-18 19:05:00",
+        "magyar": {
+            "emlitett_szokasok": [
+                "csónakkarbantartás",
+                "hajnali horgászat",
+                "vízparti mesélés"
+            ],
+            "emlitett_helyszinek": [
+                "Tisza",
+                "Tiszanagyfalu",
+                "Rakamaz"
+            ],
+            "kultura_tema": "Folyómenti életmód és vízi hagyományok"
+        },
+        "english": {
+            "text": "Growing up by the Tisza River, being close to the water, refurbishing boats in spring, and sharing stories from dawn fishing trips are part of everyday life.",
+            "mentioned_traditions": [
+                "boat maintenance",
+                "dawn fishing",
+                "riverside storytelling"
+            ],
+            "mentioned_locations": [
+                "Tisza",
+                "Tiszanagyfalu",
+                "Rakamaz"
+            ],
+            "cultural_theme": "Riverside lifestyle and water traditions"
+        }
     },
     {
-        "kategoria": "főzés",
-        "kulcsszavak": [
-            "kalács",
-            "liszt"
-        ],
-        "tudafelem": "Kalács sütéséhez liszt alapvető összetevő.",
-        "rovid_osszefoglalo": "Kalácsot sütöttünk, és észrevettük, hogy a régi idők emberei is lisztet használtak ehhez.",
-        "dramatizalt_verzio": "Egy nap, miközben édesanyjával együtt készítettük a kalácsot, visszarepültünk az időben, és felfedeztük, hogy nemcsak ma, hanem évszázadokkal ezelőtt is a liszt volt a kalács titkos összetevője, ami összeköt minket a múlt ízeivel.",
-        "forditas_en": "We baked a sweet bread and realized that people used flour for making sweet bread in the past."
+        "raw": "A nyírségi szilvalekvárt rézüstben, cukor nélkül, órákon át kevergetve főzték, amíg olyan sűrű nem lett, hogy megállt benne a fakanál.",
+        "raw_en": "Nyírség plum jam was cooked in a copper cauldron without sugar, stirred for hours until it became thick enough for the wooden spoon to stand upright.",
+        "timestamp": "2026-08-11 16:04:40",
+        "magyar": {
+            "emlitett_szokasok": [
+                "szilvalekvárfőzés rézüstben",
+                "cukormentes tartósítás",
+                "közös keverés"
+            ],
+            "emlitett_helyszinek": [
+                "Nyírség",
+                "Szatmár"
+            ],
+            "kultura_tema": "Gasztronómiai örökség és tartósítás"
+        },
+        "english": {
+            "text": "Nyírség plum jam was cooked in a copper cauldron without sugar, stirred for hours until it became thick enough for the wooden spoon to stand upright.",
+            "mentioned_traditions": [
+                "cooking plum jam in a copper cauldron",
+                "sugar-free fruit preservation"
+            ],
+            "mentioned_locations": [
+                "Nyírség",
+                "Szatmár"
+            ],
+            "cultural_theme": "Culinary heritage and food preservation"
+        }
     },
     {
-        "kategoria": "gépészet",
-        "kulcsszavak": [
-            "bicikli",
-            "fogaskerék",
-            "zsírozás"
-        ],
-        "tudafelem": "A fogaskerekek zsírozása elengedhetetlen a bicikli sima működéséhez és élettartama növeléséhez.",
-        "rovid_osszefoglalo": "A bicikli szerelés során fontos, hogy a fogaskerekeket megfelelően zsírozzuk a hosszú távú hatékonyság érdekében.",
-        "dramatizalt_verzio": "Képzeljük el, ahogy egy napsütéses délutánon a bicikli szerszámok birtokában állunk, és a mechanikus zsírtémában elmerülve látjuk, ahogy a fogaskerekek simán forognak, miután gondosan ápoltuk őket. Ez a kis, de lényeges mozzanat nem csupán a biciklizés élvezetét növeli, hanem annak élettartamát is.",
-        "forditas_en": "During the bicycle assembly, it's crucial to properly lubricate the gears to ensure long-term efficiency."
+        "raw": "A műhelyben az az első szabály, hogy minden villáskulcsnak és csavarhúzónak megvan a helye: ha rend van a szerszámosfalon, azonnal megtalálod, ami kell.",
+        "raw_en": "The first rule in the workshop is that every wrench and screwdriver has its place: if the tool wall is organized, you find what you need right away.",
+        "timestamp": "2026-09-14 16:50:00",
+        "magyar": {
+            "emlitett_szokasok": [
+                "szerszámkarbantartás",
+                "műhelyrend",
+                "szerszámosfal rendezése"
+            ],
+            "emlitett_helyszinek": [
+                "Debrecen"
+            ],
+            "kultura_tema": "Kézműves tudás és szerszámkultúra"
+        },
+        "english": {
+            "text": "The first rule in the workshop is that every wrench and screwdriver has its place: if the tool wall is organized, you find what you need right away.",
+            "mentioned_traditions": [
+                "tool maintenance",
+                "workshop organization"
+            ],
+            "mentioned_locations": [
+                "Debrecen"
+            ],
+            "cultural_theme": "Craftsmanship and tool culture"
+        }
     },
     {
-        "kategoria": "gépészet",
-        "kulcsszavak": [
-            "bicikliszerelés",
-            "fogaskerekek",
-            "zsírozás"
-        ],
-        "tudafelem": "A fogaskerekek megfelelő zsírozása biztosítja a bicikli hatékony működését és élettartamának megőrzését.",
-        "rovid_osszefoglalo": "A fogaskerekek zsírozása elengedhetetlen a bicikli optimális teljesítményéhez.",
-        "dramatizalt_verzio": "Képzeld el, ahogy egy kedvelt biciklidet szerelgeted, és amikor a fogaskerekek simán forognak a frissen felvitt zsírtól, megérted, hogy ez a kis lépés mennyire nagy különbséget jelent a kerékpárod életében.",
-        "forditas_en": "Greasing the gears is essential for the optimal performance of the bicycle."
-    },
-    {
-        "kategoria": "gépészet",
-        "kulcsszavak": [
-            "motor",
-            "olajcsere",
-            "olajszűrő"
-        ],
-        "tudafelem": "A motor olajának és olajszűrőjének rendszeres cseréje elengedhetetlen a megfelelő működéshez.",
-        "rovid_osszefoglalo": "Az interjú során elhangzott, hogy mindig szükséges a motor olajának feltöltése és az olajszűrő cseréje.",
-        "dramatizalt_verzio": "Képzeld el, hogy egy nyári napon a napfényben állsz a szerelőműhelyben, és a motor alatt állva felfedezed, hogy az olajszűrőt cserélni kell. Felbuzdulva töltöd fel az olajat, hiszen tudod, hogy ez a motor élete szempontjából elengedhetetlen lépés. Ekkor jössz rá, hogy ha nem figyelsz ezekre a részletekre, a motor teljesítménye csökkenhet, és a problémák elkerülhetetlenek lesznek.",
-        "forditas_en": "During the interview, it was mentioned that it is always necessary to refill the engine oil and replace the oil filter."
-    },
-    {
-        "kategoria": "Gépészet",
-        "kulcsszavak": [
-            "gyújtás",
-            "karburátor"
-        ],
-        "tudafelem": "A gyújtás és a karburátor benzinszintjének pontos beállítása elengedhetetlen a motor optimális működéséhez.",
-        "rovid_osszefoglalo": "A gyújtás és a karburátor benzinszintjének helyes beállítása biztosítja a motor hatékony működését.",
-        "dramatizalt_verzio": "Egy nap autószerelés közben, miközben fotót készítettek, a szerelők felfedezték, hogy a gyújtás és a karburátor benzinszintjének pontos beállítása nemcsak a motor megbízhatóságát, hanem a teljesítményét is javítja. Ez a felfedezés megváltoztatta a munkájukat, hisz tudták, hogy mostantól még jobban oda kell figyelniük a részletekre.",
-        "forditas_en": "Setting the ignition and the carburetor's fuel level correctly is essential for the optimal functioning of the engine."
-    },
-    {
-        "projects_mentioned": [],
-        "tools_used": [],
-        "core_topic": "befőtt készítés",
-        "raw_response": "Na, tényleg befőttet rakhatunk be nagymamámmal, megy befőttet.",
-        "timestamp": "2026-06-20 16:25:34"
-    },
-    {
-        "projects_mentioned": [
-            "befőtt automatizáló gép"
-        ],
-        "tools_used": [],
-        "core_topic": "automatizálás",
-        "raw_response": "Hát, nem is tudom, valami befőtt automatizáló gépet kellene készíteni akár, vagy valami hasonlót.",
+        "raw": "Szia! Én Nyíregyházáról származom, de a nagyszüleim és a szüleim Tokajban élnek, borászattal foglalkoznak, és nagyon szeretik a hagyományos borkészítést megőrizni.",
+        "raw_en": "Hi! I'm from Nyíregyháza, while my grandparents and parents live in Tokaj, work in winemaking, and love preserving traditional wine production.",
+        "timestamp": "2026-11-24 23:34:26",
+        "magyar": {
+            "emlitett_szokasok": [
+                "borkészítés",
+                "szőlőtermesztés",
+                "hagyományőrzés"
+            ],
+            "emlitett_helyszinek": [
+                "Nyíregyháza",
+                "Tokaj"
+            ],
+            "kultura_tema": "Borászat és borkultúra"
+        },
+        "english": {
+            "text": "Hi! I'm from Nyíregyháza, while my grandparents and parents live in Tokaj, work in winemaking, and love preserving traditional wine production.",
+            "mentioned_traditions": [
+                "winemaking",
+                "viticulture",
+                "preserving traditions"
+            ],
+            "mentioned_locations": [
+                "Nyíregyháza",
+                "Tokaj"
+            ],
+            "cultural_theme": "Wine and wine culture"
+        }
+    }
+]
+mi befőtt automatizáló gépet kellene készíteni akár, vagy valami hasonlót.",
         "timestamp": "2026-06-20 16:26:07"
     },
     {
