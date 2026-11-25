@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0b1030">
-<title>NEXANIC | Hagyományarchívum / Tradition archive</title>
+<title>ELDERWISE | Hagyományarchívum / Tradition archive</title>
 <style>
 *{box-sizing:border-box}
 :root{--bg:#0b1030;--line:rgba(239,231,214,.12);--tx:#efe7d6;--mut:#98a1c4;--red:#ee5a45;--grn:#86d1a4;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;color-scheme:dark}
@@ -78,8 +78,8 @@ footer a{color:var(--grn)}
 <div class="wrap">
   <header class="hero">
     <div class="brand">
-      <div class="logo" aria-hidden="true">N</div>
-      <div><h1>NEXANIC</h1><p id="sub"></p></div>
+      <div class="logo" aria-hidden="true">E</div>
+      <div><h1>ELDERWISE</h1><p id="sub"></p></div>
     </div>
     <p id="sum"></p>
   </header>
@@ -99,13 +99,13 @@ footer a{color:var(--grn)}
   </section>
   <div class="meta"><span id="status" class="status" role="status" aria-live="polite"></span><span id="count"></span></div>
   <main id="list" class="grid"></main>
-  <footer>NEXANIC &ndash; <a href="https://github.com/simson122/NEXANIC" target="_blank" rel="noopener">github.com/simson122/NEXANIC</a></footer>
+  <footer>ELDERWISE &ndash; <a href="https://github.com/simson122/NEXANIC" target="_blank" rel="noopener">github.com/simson122/NEXANIC</a></footer>
 </div>
 <script>
 (()=>{
 "use strict";
 const RAW_JSON_URL="https://raw.githubusercontent.com/simson122/NEXANIC/main/tudastar.json";
-const POLL_MS=4000,TR_KEY="nexanic.tr.v1",LANG_KEY="nexanic.lang";
+const POLL_MS=4000,TR_KEY="elderwise.tr.v1",LANG_KEY="elderwise.lang";
 const I={
 hu:{sub:"A hagyományőrző animatronikus robot élő tudástára",ph:"Keresés szokások, helyszínek, témák, átiratok között…",live:"Élő",on:"BE",off:"KI",ref:"Frissítés",file:"Helyi JSON",clear:"Keresés törlése",
 entries:"bejegyzés",trad:"szokás",loc:"helyszín",latest:"legutóbbi",orig:"Eredeti átirat",showing:"{n} / {m} bejegyzés látható",none:"Nincs a keresésnek megfelelő bejegyzés.",empty:"Még nincs bejegyzés az archívumban.",notext:"Nincs elérhető szöveg.",
@@ -133,10 +133,10 @@ function norm(e,i){
   if(!e||typeof e!=="object")e={raw:e};
   const m=e.magyar||e.hu||{},g=e.english||e.en||{};
   const o={id:i,n:i+1,ts:pick(e.timestamp,e.time,e.date),
-    raw:pick(e.raw,m.szoveg,m.text),
-    rawEn:pick(e.raw_en,g.text,g.translation,g.transcript,e.text_en,e.translation,typeof g==="string"?g:""),
-    hu:{th:pick(m.kultura_tema),tr:arr(m.emlitett_szokasok),lo:arr(m.emlitett_helyszinek)},
-    en:{th:pick(g.cultural_theme),tr:arr(g.mentioned_traditions),lo:arr(g.mentioned_locations)}};
+    raw:pick(e.raw,e.tudafelem,e.rovid_osszefoglalo,m.szoveg,m.text),
+    rawEn:pick(e.raw_en,e.forditas_en,g.text,g.translation,g.transcript,e.text_en,e.translation,typeof g==="string"?g:""),
+    hu:{th:pick(m.kultura_tema,e.kultura_tema,e.kategoria),tr:arr(m.emlitett_szokasok||e.emlitett_szokasok||e.kulcsszavak),lo:arr(m.emlitett_helyszinek||e.emlitett_helyszinek||e.helyszinek)},
+    en:{th:pick(g.cultural_theme,e.kategoria),tr:arr(g.mentioned_traditions),lo:arr(g.mentioned_locations)}};
   o.hay=fold([o.ts,o.raw,o.rawEn,o.hu.th,o.en.th,...o.hu.tr,...o.en.tr,...o.hu.lo,...o.en.lo].join("\n"));
   return o}
 const L=(o,k)=>{const a=lang==="hu"?[o.hu[k],o.en[k]]:[o.en[k],o.hu[k]];return a[0].length?a[0]:a[1]};
